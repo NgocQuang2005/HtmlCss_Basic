@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0; /*rest padding cho the body*/
+  margin: 0; /**/
+  height: 100%; /*chiều cao tự dãn ra cho body*/
+  font-family: "Arial", sans-serif; /*Font chữ , sans-serif là font kh có chân*/
+  background: linear-gradient(
+    to right,
+    #a46262,
+    #21cfac
+  ); /*Back ground phối màu , với gtri của bg là linear...(to và truyền vào là top right bottom left , màu thứ nhất , màu thứ 2 , và có thể thêm dc nhiều màu khác)*/
+}
+ul {
+  list-style-type: none; /*bỏ dấu gạch chân của thẻ li*/
+  padding: 5px;
+}
+li {
+  cursor: pointer; /*con trỏ chuột có hình ngón tay chỉ*/
+}
+.dass {
+  padding: 10px;
+  text-transform: uppercase; /*chữ của thẻ chứa class này luôn in hoa*/
+  font-size: 16px;
+}
+.nav {
+  width: 400px;
+  height: 100%;
+  background: #d6e3fb;
+  color: black;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 20px; /*bo tròn các cạnh của thẻ*/
+}
+.nav_logo {
+  display: flex; /*đưa các phần tử thẻ con của nó lên cùng 1 hàng*/
+  /* justify-content: space-between;  */ /*có thể căn chỉnh theo chiều ngang center , space-bettwe... , để các thẻ con nằm như thế nào theo chiều ngang*/
+  align-items: center; /*căn theo chiều dọc , có thêm cả end , start là căn ở trên dưới...*/
+}
+.nav_logo img {
+  width: 60px;
+  height: 60px;
+  margin-right: 30px;
+}
+.nav_logo span {
+  font-weight: bold; /*chữ in đậm*/
+  font-size: 21px;
+}
+.menu {
+  width: 100%;
+  height: 100%;
+  font-size: 21px;
+  font-weight: 600;
+  color: #6f6c6c;
+}
+.menu-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  transition: all 0.2s linear; /*giống như animation nó sẽ xét đầu tiên là thuộc tính css mà nó ảnh hưởng , ví dụ để là color ... , 2 là thời gian chạy , 3 là kiểu chạy , nó xét cho cái mà mình hover ở dưới*/
+}
+.menu-item:hover {
+  background: #8cc9c4cc;
+  color: #fff;
+}
+.menu-item.active {
+  background-color: #fff;
+  color: black;
+}
+.menu-item ion-icon {
+  margin-right: 25px;
+  font-size: 30px;
+}
+.message {
+  background-color: rgb(53, 78, 222);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 16px;
+}
+.list_ds {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.messages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+}
+.messages span {
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.messages div {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.messages div ion-icon:first-child {
+  color: #a09494;
+  margin-right: 20px;
+}
+.messages div ion-icon {
+  color: black;
+}
+.user-item {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  color: #000000;
+}
+.user-item img {
+  margin-right: 25px;
+  width: 40px;
+  height: 40px;
+  object-fit: cover; /*làm cho ảnh kh bị méo khi kích thước thay đổi*/
+  border-radius: 50%;
+}
+.tinnhan {
+  background-color: rgb(199, 200, 206);
+  color: #000000;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 16px;
+}
+.users {
+  background: #fff;
+  padding: 20px 0px;
+  border-radius: 30px;
+  position: relative;
+}
+.list_user {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /*phần tử con sẽ ở đầu và cuối theo chiều ngang*/
+  align-items: center;
+}
+.bacham {
+  font-size: 29px;
+  color: #21cfac;
+  background: #88e1d12d;
+  padding: 0 9px;
+  border-radius: 12px;
+}
+.allMess {
+  width: 200px;
+  background: #0275e7;
+  color: #fff;
+  padding: 20px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  position: absolute; /*sẽ làm cho thẻ này nổi lên và kh chiếm kích thước của màn hình nữa , có thể di chuyển qua lại ở mọi noi mà không bị bể kích cỡ vì nó không chiếm diện tích website nữa , và khi xét thuộc tính này là absolute thì cha chứa nó nên để relative để làm chuẩn , kh để thì nó ăn theo tk body*/
+  bottom: -30px;
+  right: 65px;
+}
+.allMess ion-icon {
+  margin-right: 10px;
+}
